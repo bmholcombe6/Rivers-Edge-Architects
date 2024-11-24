@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | River's Edge Architects</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">River's Edge Architects</a>
+      </div>
+      <button class="menu-button" aria-label="Toggle Menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar-menu">
+    <ul>
+      <li><a href="expertise.html">Expertise</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  
+  <!-- Overlay for Clicking Outside -->
+  <div class="menu-overlay"></div>
+  
+  <!-- Contact Us Section -->
+  <!-- Main Content -->
+  <main class="contact-page">
+    <section class="left-section">
+      <h1>Contact Us</h1>
+      <p>We are always eager to connect with new people. Whether you’re planning a new project,
+        exploring career opportunities, or simply interested in learning more about the architectural
+        design process, we’d love to hear from you.</p>
+      <p>At River's Edge Architects, we value meaningful conversations and are committed to providing
+          guidance and expertise to help you achieve your goals.</p>
+      <div class="contact-info">
+        <p><strong> Contact Info:</strong></p>
+        <p>Brandon Holcombe, AIA</p>
+        <p>302.668.7898</p>
+        <p><a href="mailto:bholcombe@riversedgearchitects.com">bholcombe@riversedgearchitects.com</a></p>
+      </div>
+    </section>
+
+    <section class="right-section">
+      <div class="contact-section">
+        <form class="contact-form" action="https://formspree.io/f/mjkvobaj" method="POST">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Phone">
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 River's Edge Architects. All rights reserved.</p>
+  </footer>
+
+  <script src="menu.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff; /* Light gray background */
+  }
+  
+  /* Header */
+  header {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 0px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .logo {
+    font-family: "Franklin Gothic Book";
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logo a:hover {
+    color: #ddd;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    font-family: "Franklin Gothic Book";
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+/* Menu Button (Hidden by Default) */
+.menu-button {
+    display: none; /* Hidden on larger screens */
+    font-size: 1.5rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 30;
+  }
+
+  
+/* Sidebar Menu */
+.sidebar-menu {
+    position: fixed;
+    top: 60px;
+    right: -20%;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: right 0.3s ease-in-out;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .sidebar-menu ul {
+    list-style: none;
+    gap: 100px;
+  }
+  
+  .sidebar-menu ul li a {
+    color: #fff;
+    font-family: "Franklin Gothic Book";
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
+  .sidebar-menu ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar-menu.active {
+    right: 0;
+  }
+
+  /* Contact Page Layout */
+  .contact-page {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh; /* Full height minus header */
+    font-family: "Franklin Gothic Book";
+  }
+  
+  /* Left Section */
+  .left-section {
+    flex: 0 0 600px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  
+  .left-section h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .left-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .left-section p strong {
+    font-weight: normal;
+    font-weight: bold;
+  }
+  
+  .left-section .contact-info p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+  }
+  
+  .left-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .left-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Right Section */
+  .right-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 140px;
+  }
+  
+  .contact-section {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 900px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 6px;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Book";
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+    margin-bottom: 8px;
+  }
+
+  .contact-form textarea {
+    margin-top: 8px;
+    border: 1px solid #ccc; /* Full outline for the message box */
+    height: 200px; /* Increase height for better usability */
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaa; /* Placeholder text color */
+    font-family: "Franklin Gothic Book";
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: rgb(0, 60, 120);
+    outline: none;
+    font-family: "Franklin Gothic Book";
+  }
+  
+  .contact-form button {
+    background-color: rgb(0, 60, 120);
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+@media (max-width: 1000px) {
+    .menu-button {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    .slide img {
+      width: 1000px;
+    }
+  
+    .caption {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .caption {
+      font-size: 0.9rem;
+    }
+  }
