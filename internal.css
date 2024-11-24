@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(40, 40, 40);
   color: #fff;
   padding: 0px 20px;
   position: fixed; /* Stay at the top */
@@ -32,11 +32,12 @@ header {
 }
 
 .logo {
-  font-family: "Franklin Gothic Book";
+  font-family: "Helvetica";
+  font-stretch: semi-condensed;
   font-size: 1.6rem;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 2.4px;
+  letter-spacing: 2px;
   color: #fff;
   margin-right: 20px; /* Space between the logo and nav */
 }
@@ -64,7 +65,7 @@ nav ul li {
 
 nav ul li a {
   color: #fff;
-  font-family: "Franklin Gothic Book";
+  font-family: "Helvetica";
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-decoration: none;
@@ -82,12 +83,20 @@ main {
   color: #333; /* Dark text for readability on a white background */
 }
 
+/* Footer Styles */
 footer {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(40, 40, 40);
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Menu Button (Hidden by Default) */
@@ -126,7 +135,7 @@ footer {
 
 .sidebar-menu ul li a {
   color: #fff;
-  font-family: "Franklin Gothic Book";
+  font-family: "Helvetica";
   letter-spacing: 2px;
   font-weight: lighter;
   font-size: 1.1rem;
@@ -162,25 +171,33 @@ footer {
     padding: 10px;
     border-radius: 5px;
   }
-
-  .slide img {
-    width: 1000px;
-  }
-
-  .caption {
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 480px) {
-  .caption {
-    font-size: 0.9rem;
+@media (max-width: 500px) {
+  .sidebar-menu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .menu-button {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }
 
 /* Expertise Section */
 .expertise-section {
-  text-align: left;
+  text-align: justify;
+  hyphens: auto; /* Enables hyphenation */
+  overflow-wrap: break-word; /* Ensures long words are broken if necessary */
+  word-break: break-word; /* Fallback for older browsers */
   padding: 20px 20px;
   background-color: #fff;
   color: #333;
@@ -191,7 +208,7 @@ footer {
 .expertise-section h1 {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: 2px;
   font-size: 2rem;
 }
@@ -199,7 +216,7 @@ footer {
 .expertise-section p {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: .2px;
   font-size: 1.2rem;
   margin-bottom: 40px;
@@ -229,7 +246,7 @@ footer {
 }
 
 .expertise-item h2 {
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: 1.5px;
   margin: 0; /* Remove default margin */
   padding: 0; /* Ensure no extra spacing is added */
@@ -258,6 +275,13 @@ footer {
   z-index: 0;
 }
 
+/* Expertise Grid Responsive Behavior */
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+}
+
 /* Main Content Area */
 main {
   max-width: 1200px;
@@ -279,7 +303,7 @@ main {
 .team-intro h1 {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: 2px;
   font-size: 2rem;
 }
@@ -287,7 +311,7 @@ main {
 .team-intro .intro {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: .2px;
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -316,7 +340,7 @@ main {
 
 .team-member .details {
   flex: 2 1 600px;
-  font-family: "Franklin Gothic Book";
+  font-family: "Helvetica";
 }
 
 .team-member h2 {
@@ -376,7 +400,7 @@ hr {
 .professional-partnerships h1 {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: 2px;
   font-size: 2rem;
 }
@@ -384,7 +408,7 @@ hr {
 .professional-partnerships .intro {
   margin: 0 0 20px 0;
   padding: 0;
-  font-family: 'Franklin Gothic Book';
+  font-family: 'Helvetica';
   letter-spacing: .2px;
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -404,7 +428,7 @@ hr {
   margin-bottom: 20px;
   margin-right: 0px;
   text-align: left;
-  font-family: "Franklin Gothic Book";
+  font-family: "Helvetica";
 }
 
 .partnership .photo {
