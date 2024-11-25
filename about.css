@@ -203,6 +203,7 @@
   flex: 0 0 600px;
   position: relative;
   margin-top: 60px;
+  overflow: hidden;
 }
 
 .image-column img {
