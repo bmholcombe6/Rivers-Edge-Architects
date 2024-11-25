@@ -363,6 +363,8 @@
 
 .services-text p {
   font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
   margin-bottom: 20px;
   text-align: justify;
   hyphens: auto; /* Enables hyphenation */
@@ -374,11 +376,11 @@
   list-style: circle;
   margin-left: 40px;
   padding: 0;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .services-text ul > li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0px;
   color: #555;
 }
@@ -391,11 +393,12 @@
 .services-text ul ul li {
   font-size: 1rem;
   margin-bottom: 0px;
-  color: #777;
+  color: #555;
 }
 
 @media (max-width: 1000px) {
   .services-text {
+    margin-left: 30px;
     margin-right: 10px;
   }
 
@@ -540,4 +543,10 @@
   hyphens: auto;
   overflow-wrap: break-word; /* Ensures long words are broken if necessary */
   word-break: break-word; /* Fallback for older browsers */
+}
+
+@media (max-width: 500px) {
+  .community-container {
+    margin-left: 30px;
+  }
 }
