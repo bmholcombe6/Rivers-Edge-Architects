@@ -11,7 +11,7 @@ html, body {
   height: 100%;
   font-family: "Helvetica";
   line-height: 1.6;
-  background-color: #000;
+  background-color: #000000;
   color: #fff;
 }
 
@@ -39,7 +39,7 @@ header {
   font-stretch: semi-condensed;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 6px;
   color: #fff;
   margin-right: 20px; /* Space between the logo and nav */
 }
@@ -127,10 +127,14 @@ nav ul li a:hover {
 /* Slideshow Styles */
 .slideshow-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: calc(100vw * 9 / 16);
   overflow: hidden;
   background-color: #000;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide {
@@ -149,12 +153,12 @@ nav ul li a:hover {
   width: 100%;
   height: auto;
   object-fit: cover;
-  min-width: 1000px; /* Minimum width to prevent shrinking */
+  object-position: center;
 }
 
 /* Footer Styles */
 footer {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   text-align: center;
   width: 100%;
@@ -168,21 +172,14 @@ footer {
   white-space: nowrap;
 }
 
-/* Caption Styles */
-.caption {
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-}
-
 /* Responsive Design */
 @media (max-width: 1000px) {
+  .header-container {
+    align-items: center;
+  }
+  
   .menu-button {
-    display: block;
+    display: flex;
   }
 
   nav ul {
@@ -202,12 +199,12 @@ footer {
   .slideshow-container {
     width: 100vw;
     height: calc(100vh - 8%);
-    align-items: center;
+    margin: auto;
   }
 
   .slide img {
     height: 100%;
-    margin: 0;
+    min-width: unset;
   }
 }
 
@@ -215,14 +212,23 @@ footer {
   .sidebar-menu {
     width: 100%;
     right: -100%;
+    top: 48px;
+  }
+
+  .header-container {
+    height: 48px;
+    justify-content: center;
   }
 
   .logo {
     font-size: 1rem;
+    letter-spacing: 2px;
+    text-wrap: wrap;
   }
 
   .menu-button {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: -2px;
   }
 
   footer {
