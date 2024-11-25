@@ -217,6 +217,7 @@ footer {
   margin: 0 0 20px 0;
   padding: 0;
   font-family: 'Helvetica';
+  font-weight: normal;
   letter-spacing: 2px;
   font-size: 2rem;
 }
@@ -262,6 +263,8 @@ footer {
 
 .expertise-item h2 {
   font-family: 'Helvetica';
+  font-weight: normal;
+  font-style: italic;
   letter-spacing: 1.5px;
   margin: 0; /* Remove default margin */
   padding: 0; /* Ensure no extra spacing is added */
@@ -322,6 +325,7 @@ main {
   margin: 0 0 20px 0;
   padding: 0;
   font-family: 'Helvetica';
+  font-weight: normal;
   letter-spacing: 2px;
   font-size: 2rem;
 }
@@ -439,6 +443,7 @@ hr {
   margin: 0 0 20px 0;
   padding: 0;
   font-family: 'Helvetica';
+  font-weight: normal;
   letter-spacing: 2px;
   font-size: 2rem;
 }
