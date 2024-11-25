@@ -25,9 +25,9 @@
   }
   
   .header-container {
-    background-color: #000;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically align items */
     height: 60px;
   }
   
