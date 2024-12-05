@@ -342,17 +342,17 @@ main {
 /* Team Member Section */
 .team-member {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .team-member .photo {
-  flex: 1 1 320px;
-  max-width: 320px;
-  margin-top: 20px;
+  flex: 1 1 326px;
+  max-width: 326px;
+  margin-top: 12px;
   margin-left: 20px;
   margin-right: 60px;
-  margin-bottom: 40px;
 }
 
 .team-member .photo img {
@@ -363,6 +363,8 @@ main {
 .team-member .details {
   flex: 2 1 400px;
   font-family: "Helvetica";
+  margin-left: 20px;
+  margin-top: -80px;
 }
 
 .team-member h2 {
@@ -382,7 +384,7 @@ main {
 
 .team-member p {
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: justify;
   hyphens: auto; /* Enables hyphenation */
   overflow-wrap: break-word; /* Ensures long words are broken if necessary */
