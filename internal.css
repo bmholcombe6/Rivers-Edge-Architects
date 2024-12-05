@@ -414,11 +414,11 @@ hr {
 
   .team-member .photo {
     margin-right: 0;
-    margin-bottom: -60px;
+    margin-bottom: 0px;
   }
 
   .team-member .details {
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 10px;
   }
 
