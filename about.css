@@ -280,9 +280,16 @@
     gap: 40px; /* Add more spacing between sections */
   }
 
+  .image-column {
+    width: 100%;
+    overflow: hidden;
+  }
+
   .image-column img {
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .text-column {
@@ -339,34 +346,42 @@
   gap: 20px; /* Space between the columns */
 }
 
-.content-container {
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  align-items: flex-start; /* Align items at the top of the section */
-  justify-content: space-between; /* Add spacing between columns */
-  gap: 20px; /* Space between text and image */
-}
-
-/* Left Column: Services Text */
-.services-text {
-  flex: 1; /* Allow this column to flex and take up remaining space */
-  padding-right: 20px; /* Add spacing on the right */
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.services-text h2 {
+/* Intro Paragraph */
+.services-intro h2 {
   font-size: 2rem;
   font-weight: normal;
   color: #000;
   margin-bottom: 20px;
 }
 
+.services-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start; /* Align items at the top of the section */
+  margin-top: 10px;
+}
+
+/* Left Column: Services Text */
+.services-text {
+  padding-right: 20px; /* Add spacing on the right */
+}
+
 .services-text p {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   text-align: justify;
   hyphens: auto; /* Enables hyphenation */
   overflow-wrap: break-word; /* Ensures long words are broken if necessary */
@@ -377,56 +392,40 @@
   list-style: circle;
   margin-left: 40px;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
-.services-text ul > li {
-  font-size: 1.1rem;
+.services-text ul li {
+  font-size: 1.2rem;
   margin-bottom: 0px;
   color: #555;
 }
 
 .services-text ul ul {
   list-style: disc; /* Indented bullets for sub-items */
-  margin-top: 0px;
+  margin-top: -5px;
+  line-height: 1.5;
+  margin-bottom: 5px;
 }
 
 .services-text ul ul li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0px;
   color: #555;
 }
 
-@media (max-width: 1000px) {
-  .services-text {
-    margin-left: 30px;
-    margin-right: 10px;
-  }
-
-  .services-text ul {
-    margin-left: 10px;
-  }
-
-  .services-text ul ul li {
-    margin-left: 20px;
-  }
-
-
-}
-
-/* Right Column: Image */
 .services-image {
-  flex: 0 0 500px; /* Fixed width of 300px */
   position: relative;
-  margin-top: 20px;
-  margin-right: 40px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; /* Center on smaller screens if needed */
 }
 
 .services-image img {
   width: 100%; /* Full width of the container */
   height: 100%; /* Flexible height */
   object-fit: cover; /* Ensure the image maintains proportions and crops if needed */
-  object-position: center;
+  display: block;
 }
 
 .services-image::after {
@@ -438,7 +437,7 @@
   height: 20%; /* Height of the fade */
   background: linear-gradient(transparent, rgba(0, 0, 0, 1)); /* Transparent to black gradient */
   pointer-events: none; /* Ensure it doesn't interfere with hover/click */
-  z-index: 0;
+  z-index: 1;
 }
 
 .services-image .image-caption {
@@ -449,7 +448,44 @@
   padding: 5px 5px;
   font-size: 1rem;
   font-style: italic;
-  z-index: 5;
+  z-index: 2;
+}
+
+@media (max-width: 1000px) {
+  .second-section {
+    margin: 0 40px;
+  }
+
+  .content-container {
+    display: flex;
+  }
+  
+  .services-text {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  .services-text ul {
+    margin-left: 20px;
+  }
+
+  .services-text ul ul li {
+    margin-left: 20px;
+  }
+
+  .services-image {
+    max-width: 100%;
+  }
+
+  .services-image .image-caption {
+    bottom: 5px;
+    left: 5px;
+    right: 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 /* Fixed Spacing Below the Divider */
