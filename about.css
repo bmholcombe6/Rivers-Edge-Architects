@@ -229,11 +229,11 @@
 
 .image-column .image-caption {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 5px;
+  left: 5px;
   color: #fff;
   padding: 5px 5px;
-  font-size: 1rem;
+  font-size: .8rem;
   font-style: italic;
   z-index: 5;
 }
@@ -280,16 +280,9 @@
     gap: 40px; /* Add more spacing between sections */
   }
 
-  .image-column {
-    width: 100%;
-    overflow: hidden;
-  }
-
   .image-column img {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: auto;
   }
 
   .text-column {
@@ -346,42 +339,34 @@
   gap: 20px; /* Space between the columns */
 }
 
-/* Intro Paragraph */
-.services-intro h2 {
+.content-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  align-items: flex-start; /* Align items at the top of the section */
+  justify-content: space-between; /* Add spacing between columns */
+  gap: 20px; /* Space between text and image */
+}
+
+/* Left Column: Services Text */
+.services-text {
+  flex: 1; /* Allow this column to flex and take up remaining space */
+  padding-right: 20px; /* Add spacing on the right */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.services-text h2 {
   font-size: 2rem;
   font-weight: normal;
   color: #000;
   margin-bottom: 20px;
 }
 
-.services-intro p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
-  text-align: justify;
-  hyphens: auto;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-.content-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start; /* Align items at the top of the section */
-  margin-top: 10px;
-}
-
-/* Left Column: Services Text */
-.services-text {
-  padding-right: 20px; /* Add spacing on the right */
-}
-
 .services-text p {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #555;
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   text-align: justify;
   hyphens: auto; /* Enables hyphenation */
   overflow-wrap: break-word; /* Ensures long words are broken if necessary */
@@ -392,77 +377,79 @@
   list-style: circle;
   margin-left: 40px;
   padding: 0;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
-.services-text ul li {
-  font-size: 1.2rem;
+.services-text ul > li {
+  font-size: 1.1rem;
   margin-bottom: 0px;
   color: #555;
 }
 
 .services-text ul ul {
   list-style: disc; /* Indented bullets for sub-items */
-  margin-top: -5px;
-  line-height: 1.5;
-  margin-bottom: 5px;
+  margin-top: 0px;
 }
 
 .services-text ul ul li {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0px;
   color: #555;
 }
 
-.services-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto; /* Center on smaller screens if needed */
-}
-
-.services-image img {
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Flexible height */
-  object-fit: cover; /* Ensure the image maintains proportions and crops if needed */
-  display: block;
-}
-
 @media (max-width: 1000px) {
-  .second-section {
-    margin: 0 40px;
-  }
-
-  .content-container {
-    display: flex;
-  }
-  
   .services-text {
-    margin-left: 0px;
+    margin-left: 30px;
     margin-right: 10px;
   }
 
   .services-text ul {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .services-text ul ul li {
     margin-left: 20px;
   }
 
-  .services-image {
-    max-width: 100%;
-  }
 
-  .services-image .image-caption {
-    bottom: 5px;
-    left: 5px;
-    right: 10px;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+}
+
+/* Right Column: Image */
+.services-image {
+  flex: 0 0 500px; /* Fixed width of 300px */
+  position: relative;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.services-image img {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Flexible height */
+  object-fit: cover; /* Ensure the image maintains proportions and crops if needed */
+  object-position: center;
+}
+
+.services-image::after {
+  content: ""; /* Create the fade-to-black effect */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%; /* Height of the fade */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1)); /* Transparent to black gradient */
+  pointer-events: none; /* Ensure it doesn't interfere with hover/click */
+  z-index: 0;
+}
+
+.services-image .image-caption {
+  position: absolute;
+  bottom: -2px;
+  left: 5px;
+  color: #fff;
+  padding: 5px 5px;
+  font-size: .8rem;
+  font-style: italic;
+  z-index: 5;
 }
 
 /* Fixed Spacing Below the Divider */
